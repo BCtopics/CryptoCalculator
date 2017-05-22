@@ -10,22 +10,15 @@ import Foundation
 
 class BitcoinPriceController {
     
-    static let baseURL = URL(string: "https://api.etherscan.io/api")
+    static let baseURL = URL(string: "https://coinmarketcap-nexuist.rhcloud.com/api/btc/price")
     
     //MARK: - FetchUSDDollarAmount Function
     
-    static func fetchUSDollarAmount(completion: @escaping (_ responses: Ethereum?) -> Void) {
+    static func fetchUSDollarAmount(completion: @escaping (_ responses: Bitcoin?) -> Void) {
         
         guard let usdURL = baseURL else { fatalError("USD/URL is nil") }
         
-        let urlParameters = [
-            "module" : "stats",
-            "action": "ethprice",
-            "apikey":"DCKQBK1DZJ5NNV25KDWJSSQHTARUDXBY2J"
-        ]
-        
-        
-        NetworkController.performRequest(for: usdURL, httpMethod: .get, urlParameters: urlParameters, body: nil) { (data, error) in
+        NetworkController.performRequest(for: usdURL, httpMethod: .get, urlParameters: nil, body: nil) { (data, error) in
             
             guard let data = data else { return }
             
@@ -33,11 +26,11 @@ class BitcoinPriceController {
             
             guard let jsonDictionary = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] else { completion(nil); return }
             
-            
-            guard let walletDictionary = jsonDictionary["result"] as? [String: Any] else { return }
-            guard let newWalletDictionary = walletDictionary["ethusd"] as? String else { return }
-            let usdWallet = Ethereum(ethUSDAmount: newWalletDictionary)
-            print(usdWallet.ethUSDAmount)
+            guard let price = jsonDictionary["usd"] as? Double else { return }
+            let priceString = String(price)
+
+            let usdWallet = Bitcoin(bitcoinUSDAmount: priceString)
+            print(usdWallet.bitcoinUSDAmount)
             
             
             completion(usdWallet)
