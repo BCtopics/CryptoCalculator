@@ -5,6 +5,12 @@ Persona's -
 
 1. A Boy/Girl age 18-25 who is interested in seeing how much a certain crypto currency is worth.
 
+^^ General Persona's
+
+2. Bob is a college kid who bought 250 Ethereum back during the crowdsale. He paid $0.25 for each one and would like to know how much they are worth now. He can open the calculator, enter 250, and see how much they are worth at the current market price.
+
+^^ More specific Persona's
+
 
 Initial view idea -
 
@@ -23,6 +29,14 @@ Colors - Purple with a light gray background.
 4. Bigger/Smaller icons? Why?
 
 5. Should I have the currency name on the icon, just the logo itself, or just the name? Why?
+
+
+
+- Other ideas
+
+What if I had the total at the top and just start at $0.00 when they hit the button the total starts to change over time to the correct amount, through some sort of animation. Kind of like the old time cash registers, or a slot machine style.
+
+Potentially add feature that could calculate the amount made after ROI. For example if you paid $1, and sold for $2 you'd have made $1.
 
 
 
