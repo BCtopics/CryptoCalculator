@@ -11,11 +11,10 @@ import Foundation
 enum Path: String {
     case btc = "btc"
     case dash = "dash"
+    case eth = "eth"
 }
 
 class CoinPriceController {
-    
-  
     
     static let baseURL = URL(string: "https://coinmarketcap-nexuist.rhcloud.com/api/")
     
