@@ -35,12 +35,12 @@ class CalculationViewController: UIViewController, UITextFieldDelegate {
     }
     
     func calculateBitcoinPrice() {
-        BitcoinPriceController.fetchUSDollarAmount(completion: { (wallet) in
+        CoinPriceController.fetchUSDollarAmount(path: .btc, completion: { (wallet) in
             guard let usd = wallet else { NSLog("wallet in fetchUSDDollarAmount was nil"); return }
             DispatchQueue.main.async {
                 
                 guard let balanceEntered = self.amountEntered.text else { return }
-                guard let a = Double(usd.bitcoinUSDAmount) else { return }
+                guard let a = Double(usd.coinUSDAmount) else { return }
                 guard let b = Double(balanceEntered) else { return }
                 let total = a * b
                 
