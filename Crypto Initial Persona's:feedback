@@ -1,0 +1,34 @@
+Crypto Initial Persona's/feedback
+
+
+Persona's -
+
+1. A Boy/Girl age 18-25 who is interested in seeing how much a certain crypto currency is worth.
+
+
+Initial view idea -
+
+Have a view a textfield where they can enter an amount of currency. Then they can hit the button corresponding to whichever currency they'd like to check, an alert will pop up with the total.
+
+Colors - Purple with a light gray background.
+
+- Questions
+
+1. Alert controller or a textLabel? Or perhaps a different view all together?
+
+2. How many different types should they be able to check? should it be limited to 6 or 9 of the most popular ones?
+
+3. Should I have the user tap one of the icons first, and then a alert controller pop up where you enter the amount? Or should I keep it the way it is (textfield) on initial view.
+
+4. Bigger/Smaller icons? Why?
+
+5. Should I have the currency name on the icon, just the logo itself, or just the name? Why?
+
+
+
+
+
+
+
+
+
