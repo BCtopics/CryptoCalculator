@@ -15,6 +15,8 @@
 		6B1E10DB1ED3650600B9860D /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E10DA1ED3650600B9860D /* NetworkController.swift */; };
 		6B1E10DD1ED3656400B9860D /* EthereumPriceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E10DC1ED3656400B9860D /* EthereumPriceController.swift */; };
 		6B1E10DF1ED365E800B9860D /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E10DE1ED365E800B9860D /* CalculationViewController.swift */; };
+		6B48B9831ED37DFF00948C47 /* BitcoinPriceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B48B9821ED37DFF00948C47 /* BitcoinPriceController.swift */; };
+		6B48B9851ED37E4B00948C47 /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B48B9841ED37E4B00948C47 /* Bitcoin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		6B1E10DA1ED3650600B9860D /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		6B1E10DC1ED3656400B9860D /* EthereumPriceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumPriceController.swift; sourceTree = "<group>"; };
 		6B1E10DE1ED365E800B9860D /* CalculationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
+		6B48B9821ED37DFF00948C47 /* BitcoinPriceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinPriceController.swift; sourceTree = "<group>"; };
+		6B48B9841ED37E4B00948C47 /* Bitcoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bitcoin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				6B1E10D71ED364AD00B9860D /* Ethereum.swift */,
+				6B48B9841ED37E4B00948C47 /* Bitcoin.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				6B1E10DC1ED3656400B9860D /* EthereumPriceController.swift */,
+				6B48B9821ED37DFF00948C47 /* BitcoinPriceController.swift */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -187,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1E10D81ED364AD00B9860D /* Ethereum.swift in Sources */,
+				6B48B9831ED37DFF00948C47 /* BitcoinPriceController.swift in Sources */,
+				6B48B9851ED37E4B00948C47 /* Bitcoin.swift in Sources */,
 				6B1E10DF1ED365E800B9860D /* CalculationViewController.swift in Sources */,
 				6B1E10C21ED3526300B9860D /* AppDelegate.swift in Sources */,
 				6B1E10DD1ED3656400B9860D /* EthereumPriceController.swift in Sources */,
@@ -354,6 +362,7 @@
 				6B1E10D21ED3526300B9860D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
