@@ -58,6 +58,27 @@ class CalculationViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func calculateDashPrice() {
+        CoinPriceController.fetchUSDollarAmount(path: .dash, completion: { (wallet) in
+            guard let usd = wallet else { NSLog("wallet in fetchUSDDollarAmount was nil"); return }
+            DispatchQueue.main.async {
+                
+                guard let balanceEntered = self.amountEntered.text else { return }
+                guard let a = Double(usd.coinUSDAmount) else { return }
+                guard let b = Double(balanceEntered) else { return }
+                let total = a * b
+                
+                self.temp = String("$\(total)")
+                
+                let alert = UIAlertController(title: "\(self.temp)", message: nil, preferredStyle: .alert)
+                let okAlert = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAlert)
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
+        
+    }
     
     //MARK: - IBActions/Buttons
     
@@ -69,6 +90,10 @@ class CalculationViewController: UIViewController, UITextFieldDelegate {
         calculateBitcoinPrice()
     }
 
+    @IBAction func dashButtonTapped(_ sender: Any) {
+        calculateDashPrice()
+    }
+    
     
 
     //MARK: - IBOutlets

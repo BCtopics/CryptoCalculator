@@ -12,6 +12,7 @@ class CoinPriceController {
     
     enum Path: String {
         case btc = "btc"
+        case dash = "dash"
     }
     
     static let baseURL = URL(string: "https://coinmarketcap-nexuist.rhcloud.com/api/")
