@@ -43,7 +43,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="8WG-ik-s5q"/>
                                                 </constraints>
-                                                <state key="normal" title="ETH Icon" image="EthIcon"/>
+                                                <state key="normal" title="ETH Icon" image="EthIcon">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="ethButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="Qm3-hv-Ose"/>
                                                 </connections>
@@ -71,21 +73,30 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="xAM-uE-kgJ"/>
                                                 </constraints>
-                                                <state key="normal" title="Other"/>
+                                                <state key="normal" title="Zcash Icon"/>
+                                                <connections>
+                                                    <action selector="zcashButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="iOF-4Y-37A"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-vX-tCx">
                                                 <rect key="frame" x="120" y="0.0" width="100" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="0Mz-U4-yff"/>
                                                 </constraints>
-                                                <state key="normal" title="Other"/>
+                                                <state key="normal" title="Ripple Icon"/>
+                                                <connections>
+                                                    <action selector="rippleButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="exW-Rr-hnP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHl-rv-3v9">
                                                 <rect key="frame" x="240" y="0.0" width="100" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="AHm-7S-69F"/>
                                                 </constraints>
-                                                <state key="normal" title="Other"/>
+                                                <state key="normal" title="LTC Icon"/>
+                                                <connections>
+                                                    <action selector="ltcButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="ImB-KB-N7E"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

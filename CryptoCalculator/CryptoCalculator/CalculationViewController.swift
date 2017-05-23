@@ -47,6 +47,18 @@ class CalculationViewController: UIViewController, UITextFieldDelegate {
         calculatePrice(path: .dash)
     }
     
+    @IBAction func zcashButtonTapped(_ sender: Any) {
+        calculatePrice(path: .zcash)
+    }
+    
+    @IBAction func rippleButtonTapped(_ sender: Any) {
+        calculatePrice(path: .xrp)
+    }
+    
+    @IBAction func ltcButtonTapped(_ sender: Any) {
+        calculatePrice(path: .ltc)
+    }
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var amountEntered: UITextField!
@@ -54,4 +66,5 @@ class CalculationViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Internal Properties
     
     var temp = "Nothing Yet :("
+    
 }

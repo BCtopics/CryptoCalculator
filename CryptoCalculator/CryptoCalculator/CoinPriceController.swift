@@ -12,6 +12,9 @@ enum Path: String {
     case btc = "btc"
     case dash = "dash"
     case eth = "eth"
+    case xrp = "xrp"
+    case ltc = "ltc"
+    case zcash = "zec"
 }
 
 class CoinPriceController {
