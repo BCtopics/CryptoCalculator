@@ -10,6 +10,11 @@ import UIKit
 
 class CalculationViewController: UIViewController, UITextFieldDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.amountEntered.becomeFirstResponder()
+    }
+    
     //MARK: - CalculatePrice Function
     
     func calculatePrice(path: Path) {

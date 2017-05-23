@@ -23,23 +23,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JVf-Wa-rLZ">
-                                <rect key="frame" x="17" y="394" width="340" height="170"/>
+                                <rect key="frame" x="17" y="218" width="340" height="220"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xfp-36-niO">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="100"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxc-1j-B20">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxc-1j-B20">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="737-KV-8gZ"/>
                                                 </constraints>
-                                                <state key="normal" title="BTC Icon"/>
+                                                <state key="normal" title="BTC Icon" image="BTCIcon"/>
                                                 <connections>
                                                     <action selector="btcButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="jCf-p4-ZKs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvb-ix-c98">
-                                                <rect key="frame" x="120" y="0.0" width="100" height="75"/>
+                                                <rect key="frame" x="120" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="8WG-ik-s5q"/>
                                                 </constraints>
@@ -50,72 +50,70 @@
                                                     <action selector="ethButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="Qm3-hv-Ose"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vax-um-V96">
-                                                <rect key="frame" x="240" y="0.0" width="100" height="75"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vax-um-V96">
+                                                <rect key="frame" x="240" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="agx-iR-7Xa"/>
                                                 </constraints>
-                                                <state key="normal" title="Dash Icon"/>
+                                                <state key="normal" title="Dash Icon" image="DashIcon"/>
                                                 <connections>
                                                     <action selector="dashButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="8A1-9K-8dn"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="bgB-ct-wSF"/>
+                                            <constraint firstAttribute="height" constant="100" id="bgB-ct-wSF"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hKw-Zu-J2O">
-                                        <rect key="frame" x="0.0" y="95" width="340" height="75"/>
+                                        <rect key="frame" x="0.0" y="120" width="340" height="100"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap1-Gr-Kwz">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap1-Gr-Kwz">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="xAM-uE-kgJ"/>
                                                 </constraints>
-                                                <state key="normal" title="Zcash Icon"/>
+                                                <state key="normal" title="Zcash Icon" image="ZECIcon"/>
                                                 <connections>
                                                     <action selector="zcashButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="iOF-4Y-37A"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-vX-tCx">
-                                                <rect key="frame" x="120" y="0.0" width="100" height="75"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-vX-tCx">
+                                                <rect key="frame" x="120" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="0Mz-U4-yff"/>
                                                 </constraints>
-                                                <state key="normal" title="Ripple Icon"/>
+                                                <state key="normal" title="Ripple Icon" image="RippleIcon"/>
                                                 <connections>
                                                     <action selector="rippleButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="exW-Rr-hnP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHl-rv-3v9">
-                                                <rect key="frame" x="240" y="0.0" width="100" height="75"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHl-rv-3v9">
+                                                <rect key="frame" x="240" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="AHm-7S-69F"/>
+                                                    <constraint firstAttribute="height" constant="100" id="TBa-QN-aOh"/>
                                                 </constraints>
-                                                <state key="normal" title="LTC Icon"/>
+                                                <state key="normal" title="LTC Icon" image="LTCIcon"/>
                                                 <connections>
                                                     <action selector="ltcButtonTapped:" destination="AVp-1f-PEg" eventType="touchUpInside" id="ImB-KB-N7E"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="8KY-pf-TIv"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount To Calculate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K49-dD-Zdb">
-                                <rect key="frame" x="108" y="184.5" width="159" height="20.5"/>
+                                <rect key="frame" x="108" y="116" width="159" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount of crypto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAM-lb-Fqf">
-                                <rect key="frame" x="16" y="225" width="343" height="30"/>
+                                <rect key="frame" x="16" y="156" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="AVp-1f-PEg" id="kF1-eW-8bz"/>
                                 </connections>
@@ -124,11 +122,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="K49-dD-Zdb" firstAttribute="leading" secondItem="XlT-kd-eYM" secondAttribute="leadingMargin" constant="92" id="25P-39-Xyi"/>
-                            <constraint firstItem="JVf-Wa-rLZ" firstAttribute="top" secondItem="KAM-lb-Fqf" secondAttribute="bottom" constant="139" id="MPH-II-E5t"/>
-                            <constraint firstItem="KAM-lb-Fqf" firstAttribute="top" secondItem="K49-dD-Zdb" secondAttribute="bottom" constant="20.5" id="Nw4-dJ-ykT"/>
+                            <constraint firstItem="JVf-Wa-rLZ" firstAttribute="top" secondItem="KAM-lb-Fqf" secondAttribute="bottom" constant="32" id="MPH-II-E5t"/>
+                            <constraint firstItem="KAM-lb-Fqf" firstAttribute="top" secondItem="K49-dD-Zdb" secondAttribute="bottom" constant="19.5" id="Nw4-dJ-ykT"/>
                             <constraint firstItem="KAM-lb-Fqf" firstAttribute="leading" secondItem="XlT-kd-eYM" secondAttribute="leadingMargin" id="TA9-OH-R2l"/>
-                            <constraint firstItem="mme-cE-nN0" firstAttribute="top" secondItem="JVf-Wa-rLZ" secondAttribute="bottom" constant="103" id="Urk-6z-lDm"/>
-                            <constraint firstItem="KAM-lb-Fqf" firstAttribute="top" secondItem="K49-dD-Zdb" secondAttribute="bottom" constant="20.5" id="Uv9-0Z-Ia8"/>
+                            <constraint firstItem="mme-cE-nN0" firstAttribute="top" secondItem="JVf-Wa-rLZ" secondAttribute="bottom" constant="229" id="Urk-6z-lDm"/>
+                            <constraint firstItem="KAM-lb-Fqf" firstAttribute="top" secondItem="K49-dD-Zdb" secondAttribute="bottom" constant="19.5" id="Uv9-0Z-Ia8"/>
                             <constraint firstItem="KAM-lb-Fqf" firstAttribute="trailing" secondItem="XlT-kd-eYM" secondAttribute="trailingMargin" id="fZS-FR-XUS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K49-dD-Zdb" secondAttribute="trailing" constant="92" id="mEt-xd-VKG"/>
                             <constraint firstItem="JVf-Wa-rLZ" firstAttribute="centerX" secondItem="KAM-lb-Fqf" secondAttribute="centerX" id="pJA-8A-bxD"/>
@@ -144,6 +142,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BTCIcon" width="225" height="225"/>
+        <image name="DashIcon" width="400" height="400"/>
         <image name="EthIcon" width="8000" height="8000"/>
+        <image name="LTCIcon" width="510" height="520"/>
+        <image name="RippleIcon" width="664" height="664"/>
+        <image name="ZECIcon" width="2142" height="2142"/>
     </resources>
 </document>
