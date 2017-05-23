@@ -67,4 +67,12 @@ class CalculationViewController: UIViewController, UITextFieldDelegate {
     
     var temp = "Nothing Yet :("
     
+    
+    //MARK: - UITextField Functions
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
 }
