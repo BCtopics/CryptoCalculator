@@ -112,8 +112,9 @@ class CalcViewController: UIViewController {
         
         // Balance Text Field
         view.addSubview(balanceTextField)
-        NSLayoutConstraint.init(item: balanceTextField, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint.init(item: balanceTextField, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint.init(item: balanceTextField, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1.0, constant: 8).isActive = true
+        NSLayoutConstraint.init(item: balanceTextField, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: -8).isActive = true
+        balanceTextField.borderStyle = .roundedRect
         
         
         // Setup Functions
@@ -143,7 +144,7 @@ class CalcViewController: UIViewController {
         
         secondStackView.widthAnchor.constraint(equalToConstant: 200)
         secondStackView.heightAnchor.constraint(equalToConstant: 100)
-        secondStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 120).isActive = true
+        secondStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 120).isActive = true // This is what I need to change later
         secondStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         
         secondStackView.addArrangedSubview(zcashButton)
@@ -161,7 +162,7 @@ class CalcViewController: UIViewController {
     
         // Balance Title Constraints
         
-        balanceTitle.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 96).isActive = true
+        balanceTitle.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 124).isActive = true
         balanceTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         // BalanceTextField Constraints
