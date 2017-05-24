@@ -15,6 +15,7 @@
 		6B1E10DF1ED365E800B9860D /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1E10DE1ED365E800B9860D /* CalculationViewController.swift */; };
 		6B48B9871ED3918000948C47 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B48B9861ED3918000948C47 /* Coin.swift */; };
 		6B48B9891ED3919D00948C47 /* CoinPriceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B48B9881ED3919D00948C47 /* CoinPriceController.swift */; };
+		6B4D32621ED61C2F00B95BBE /* CalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D32611ED61C2F00B95BBE /* CalcViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6B1E10DE1ED365E800B9860D /* CalculationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
 		6B48B9861ED3918000948C47 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		6B48B9881ED3919D00948C47 /* CoinPriceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinPriceController.swift; sourceTree = "<group>"; };
+		6B4D32611ED61C2F00B95BBE /* CalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				6B1E10C51ED3526300B9860D /* Main.storyboard */,
 				6B1E10DE1ED365E800B9860D /* CalculationViewController.swift */,
+				6B4D32611ED61C2F00B95BBE /* CalcViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B48B9891ED3919D00948C47 /* CoinPriceController.swift in Sources */,
+				6B4D32621ED61C2F00B95BBE /* CalcViewController.swift in Sources */,
 				6B1E10DF1ED365E800B9860D /* CalculationViewController.swift in Sources */,
 				6B1E10C21ED3526300B9860D /* AppDelegate.swift in Sources */,
 				6B48B9871ED3918000948C47 /* Coin.swift in Sources */,
