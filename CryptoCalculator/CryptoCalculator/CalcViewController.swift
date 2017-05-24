@@ -9,10 +9,11 @@
 import UIKit
 
 class CalcViewController: UIViewController {
-    
+
     //MARK: - Objects
     
     let balanceTitle = UILabel()
+    
     let balanceTextField = UITextField()
     
     // Buttons
@@ -21,20 +22,29 @@ class CalcViewController: UIViewController {
     let btcButton = UIButton()
     let dashButton = UIButton()
     
+    let zcashButton = UIButton()
+    let xrpButton = UIButton()
+    let ltcButton = UIButton()
+    
     
     // Stacks
 
     let firstStackView = UIStackView()
+    let secondStackView = UIStackView()
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.balanceTextField.becomeFirstResponder()
+        
+        balanceTextField.keyboardType = .numberPad
+        //FIXME: - Put this somewhere better later...
         
         //MARK: - First StackView
         view.addSubview(firstStackView)
         firstStackView.alignment = .fill
-        firstStackView.distribution = .fill // When I make this fill equally it does the btc icon... when I do fill it does a huge version of the ethereum icon?
+        firstStackView.distribution = .fill
         firstStackView.spacing = 20.0
         
         // Ethereum Button
@@ -62,24 +72,58 @@ class CalcViewController: UIViewController {
         dashButton.addTarget(self, action: #selector(calculatePrice(sender:)), for: .touchUpInside)
         
         
-        //MARK: - Second Stack View
+        //MARK: - Second StackView
+        
+        view.addSubview(secondStackView)
+        secondStackView.alignment = .fill
+        secondStackView.distribution = .fill
+        secondStackView.spacing = 20.0
+        
+        // Zcash Button
+        
+        zcashButton.setImage(#imageLiteral(resourceName: "ZECIcon"), for: .normal)
+        zcashButton.translatesAutoresizingMaskIntoConstraints = false
+        zcashButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        zcashButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        zcashButton.addTarget(self, action: #selector(calculatePrice(sender:)), for: .touchUpInside)
+        
+        // xrp Button 
+        
+        xrpButton.setImage(#imageLiteral(resourceName: "RippleIcon"), for: .normal)
+        xrpButton.translatesAutoresizingMaskIntoConstraints = false
+        xrpButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        xrpButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        xrpButton.addTarget(self, action: #selector(calculatePrice(sender:)), for: .touchUpInside)
+        
+        // LTC Button
+        
+        ltcButton.setImage(#imageLiteral(resourceName: "LTCIcon"), for: .normal)
+        ltcButton.translatesAutoresizingMaskIntoConstraints = false
+        ltcButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        ltcButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        ltcButton.addTarget(self, action: #selector(calculatePrice(sender:)), for: .touchUpInside)
+        
         
         // Balance Title
-        balanceTitle.text = "Calculator"
+        balanceTitle.text = "Amount to Calculate"
         balanceTitle.sizeToFit()
         view.addSubview(balanceTitle)
         
         
         // Balance Text Field
         view.addSubview(balanceTextField)
+        NSLayoutConstraint.init(item: balanceTextField, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint.init(item: balanceTextField, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
+        
         
         // Setup Functions
         
-        setupStackView()
+        setupStackView1()
+        setupStackView2()
         setupConstraints()
     }
     
-    func setupStackView() {
+    func setupStackView1() {
         
         firstStackView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -93,6 +137,21 @@ class CalcViewController: UIViewController {
         firstStackView.addArrangedSubview(dashButton)
     }
     
+    func setupStackView2() {
+        
+        secondStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        secondStackView.widthAnchor.constraint(equalToConstant: 200)
+        secondStackView.heightAnchor.constraint(equalToConstant: 100)
+        secondStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 120).isActive = true
+        secondStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
+        
+        secondStackView.addArrangedSubview(zcashButton)
+        secondStackView.addArrangedSubview(xrpButton)
+        secondStackView.addArrangedSubview(ltcButton)
+        
+    }
+    
     func setupConstraints() {
         
         // Turn Off Flags
@@ -100,9 +159,16 @@ class CalcViewController: UIViewController {
         balanceTitle.translatesAutoresizingMaskIntoConstraints = false
         balanceTextField.translatesAutoresizingMaskIntoConstraints = false
     
-
-        balanceTitle.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        // Balance Title Constraints
+        
+        balanceTitle.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 96).isActive = true
         balanceTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        // BalanceTextField Constraints
+        
+        NSLayoutConstraint.init(item: balanceTextField, attribute: .top, relatedBy: .equal, toItem: balanceTitle, attribute: .bottom, multiplier: 1.0, constant: 19.5).isActive = true
+        balanceTextField.placeholder = "Amount Of Crypto"
+        
     }
     
     
@@ -120,6 +186,18 @@ class CalcViewController: UIViewController {
         
         if sender == dashButton {
             path = .dash
+        }
+        
+        if sender == zcashButton {
+            path = .zcash
+        }
+        
+        if sender == xrpButton {
+            path = .xrp
+        }
+        
+        if sender == ltcButton {
+            path = .ltc
         }
             
         CoinPriceController.fetchUSDollarAmount(path: path, completion: { (price) in
