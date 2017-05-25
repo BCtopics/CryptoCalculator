@@ -38,7 +38,7 @@ class CalcViewController: UIViewController {
         super.viewDidLoad()
         self.balanceTextField.becomeFirstResponder()
         
-        balanceTextField.keyboardType = .numberPad
+        balanceTextField.keyboardType = .decimalPad
         //FIXME: - Put this somewhere better later...
         
         //MARK: - First StackView
