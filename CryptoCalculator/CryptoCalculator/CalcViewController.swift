@@ -130,6 +130,10 @@ class CalcViewController: UIViewController {
         
         firstStackView.widthAnchor.constraint(equalToConstant: 200)
         firstStackView.heightAnchor.constraint(equalToConstant: 100)
+        
+//        NSLayoutConstraint.init(item: firstStackView, attribute: .topMargin, relatedBy: .equal, toItem: balanceTextField, attribute: .bottomMargin, multiplier: 1.0, constant: 19.5).isActive = true
+        
+        firstStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -90).isActive = true
         firstStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         firstStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
@@ -144,7 +148,7 @@ class CalcViewController: UIViewController {
         
         secondStackView.widthAnchor.constraint(equalToConstant: 200)
         secondStackView.heightAnchor.constraint(equalToConstant: 100)
-        secondStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 120).isActive = true // This is what I need to change later
+        secondStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 20).isActive = true // This is what I need to change later
         secondStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         
         secondStackView.addArrangedSubview(zcashButton)
